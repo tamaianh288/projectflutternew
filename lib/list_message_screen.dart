@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profile_screen.dart';
+import 'package:projectflutternew/string_utils.dart';
 
 class ListMessageScreen extends StatelessWidget{
   const ListMessageScreen({super.key});
@@ -8,12 +9,13 @@ class ListMessageScreen extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TrungLee'),
+        title: Text(StringUtils.title_list_message),
         actions: [
           InkWell(
               onTap: (){
 
               },
+            splashColor: Colors.red,
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset('assets/images/Heart.png'),
@@ -32,7 +34,7 @@ class ListMessageScreen extends StatelessWidget{
           children: [
             InkWell(
                onTap: (){
-                 // Navigate sang manf chat
+                 // Navigate sang màn chat
                },
                 child: Container(
                   decoration: BoxDecoration(
@@ -49,11 +51,11 @@ class ListMessageScreen extends StatelessWidget{
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children:[
                           Container(
-                            child: Text('Guide Bot', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                            child: Text(StringUtils.guide_bot, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
                             margin: EdgeInsets.all(3),
                           ),
                           Container(
-                              child: Text('Chào bạn nhé. Tôi có thể giúp gì cho bạn?', style: TextStyle(color: Colors.black54)),
+                              child: Text(StringUtils.loi_chao_bot, style: TextStyle(color: Colors.black54)),
                               margin: EdgeInsets.all(3),
                           ),
                         ],
@@ -67,7 +69,7 @@ class ListMessageScreen extends StatelessWidget{
               height: 45,
               child: TextField(
                 decoration: InputDecoration(
-                    hintText: 'Tìm kiếm',
+                    hintText: StringUtils.search,
                     hintStyle: TextStyle(color: Colors.black54,),
                     prefixIcon: Image(image: AssetImage('assets/images/timkiem.png')),
                     filled: true,
@@ -83,7 +85,7 @@ class ListMessageScreen extends StatelessWidget{
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text('Tin nhắn', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),)
+                Text(StringUtils.message, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),)
               ],
             ),
             // ListView.seperate
@@ -114,11 +116,11 @@ class ListMessageScreen extends StatelessWidget{
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:[
-                        Text('Thanh An', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                        Text(StringUtils.thanh_an, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
                         SizedBox(height: 3,),
-                        Text('12:00', style: TextStyle(color: Colors.black54)),
+                        Text(StringUtils.time, style: TextStyle(color: Colors.black54)),
                         SizedBox(height: 15,),
-                        Text('Bạn: Chào bạn nhé.', style: TextStyle(color: Colors.black54)),
+                        Text(StringUtils.message_1, style: TextStyle(color: Colors.black54)),
                       ],
                     ),)
                 ],
@@ -147,11 +149,11 @@ class ListMessageScreen extends StatelessWidget{
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children:[
-                            Text('Thanh An', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+                            Text(StringUtils.thanh_an, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
                             SizedBox(height: 3,),
-                            Text('12:00', style: TextStyle(color: Colors.black54)),
+                            Text(StringUtils.time, style: TextStyle(color: Colors.black54)),
                             SizedBox(height: 15,),
-                            Text('Hình như anh vẫn chưa rep... ', style: TextStyle(color: Color(0xFF00D6E1))),
+                            Text(StringUtils.message_2 , style: TextStyle(color: Color(0xFF00D6E1))),
                           ],
                         ),
                       ),

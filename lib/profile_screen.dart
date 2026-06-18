@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:projectflutternew/string_utils.dart';
 import 'FakeData.dart';
 
 class ProfileScreen extends StatefulWidget{
@@ -18,9 +18,8 @@ class _ProfileScreenState extends State<ProfileScreen>{
 
   @override
   Widget build(BuildContext context){
-    final List<String> tabs = <String>['Thông tin', 'Bài viết', 'Ảnh'];
     return DefaultTabController(
-        length: tabs.length,
+        length: 3,
         child: Scaffold(
           body: NestedScrollView(
               headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled){
@@ -139,8 +138,8 @@ class _ProfileScreenState extends State<ProfileScreen>{
               },
               body: TabBarView(
                   children: [
-                    Center(child: Text('Giao diện thông tin'),),
-                    Center(child: Text('Giao diện Bài viết'),),
+                    Center(child: Text(StringUtils.thong_tin),),
+                    Center(child: Text(StringUtils.bai_viet),),
                     Center(child: GridView.builder(
                         padding: EdgeInsets.all(10),
                         itemCount: FakeData.listFakeData.length,
