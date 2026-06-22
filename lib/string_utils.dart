@@ -18,10 +18,13 @@ class StringUtils {
   static final message_2 = 'Hình như anh vẫn chưa rep... ';
   static final thong_tin = 'Giao diện thông tin';
   static final bai_viet = 'Giao diện Bài viết';
-  // static final
-  // static final
-  // static final
-  // static final
-  // static final
 
+
+  static final notes = 'Notes';
+  static final first_note = 'Create your first note !';
+  static final title = "Title";
+  static final content = "Type something...";
+  static final save_option = 'Save changes ?';
+  static final save = "Save";
+  static final discard = "Discard";
 }

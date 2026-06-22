@@ -71,6 +71,7 @@ flutter:
     - assets/images/thanhAn.png
     - assets/images/Profile.png
     - assets/images/Heart2.png
+    - assets/images/note.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
