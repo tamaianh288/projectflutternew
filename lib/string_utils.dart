@@ -27,4 +27,26 @@ class StringUtils {
   static final save_option = 'Save changes ?';
   static final save = "Save";
   static final discard = "Discard";
+  static final cancel = "Cancel";
+  static final delete = "Delete";
+  static final deleted = 'Đã xoá ghi chú thành công!';
+
+  static String removeVietnameseTones(String str) {
+    str = str.replaceAll(RegExp(r'[àáạảãâầấậẩẫăằắặẳẵ]'), 'a');
+    str = str.replaceAll(RegExp(r'[èéẹẻẽêềếệểễ]'), 'e');
+    str = str.replaceAll(RegExp(r'[ìíịỉĩ]'), 'i');
+    str = str.replaceAll(RegExp(r'[òóọỏõôồốộổỗơờớợởỡ]'), 'o');
+    str = str.replaceAll(RegExp(r'[ùúụủũưừứựửữ]'), 'u');
+    str = str.replaceAll(RegExp(r'[ỳýỵỷỹ]'), 'y');
+    str = str.replaceAll(RegExp(r'[đ]'), 'd');
+
+    str = str.replaceAll(RegExp(r'[ÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴ]'), 'A');
+    str = str.replaceAll(RegExp(r'[ÈÉẸẺẼÊỀẾỆỂỄ]'), 'E');
+    str = str.replaceAll(RegExp(r'[ÌÍỊỈĨ]'), 'I');
+    str = str.replaceAll(RegExp(r'[ÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠ]'), 'O');
+    str = str.replaceAll(RegExp(r'[ÙÚỤỦŨƯỪỨỰỬỮ]'), 'U');
+    str = str.replaceAll(RegExp(r'[ỲÝỴỶỸ]'), 'Y');
+    str = str.replaceAll(RegExp(r'[Đ]'), 'D');
+    return str;
+  }
 }

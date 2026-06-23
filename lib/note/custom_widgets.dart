@@ -61,12 +61,14 @@ class SaveInkWell extends StatelessWidget{
 class CustomTextField extends StatelessWidget{
   final double? size;
   final String? hintText;
+  final TextEditingController? controller;
 
-  const CustomTextField({super.key, required this.size, required this.hintText});
+  const CustomTextField({super.key, required this.size, required this.hintText, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       maxLines: null, //tự động xuống dòng, không giới hạn số dòng
       // keyboardType: TextInputType.multiline,
       style: TextStyle(
@@ -97,4 +99,15 @@ class CustomText extends StatelessWidget{
   Widget build(BuildContext context) {
     return Text(text ,style: TextStyle(color: color, fontSize: fontSize),);
   }
+}
+
+class ItemColors {
+    static const List<Color> noteColors = [
+      const Color(0xFFFD99FF),
+      const Color(0xFFFF9E9E),
+      const Color(0xFF91F48F),
+      const Color(0xFFFFF599),
+      const Color(0xFF9EFFFF),
+      const Color(0xFFB69CFF),
+    ];
 }
