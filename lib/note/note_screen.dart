@@ -3,6 +3,7 @@ import 'package:projectflutternew/string_utils.dart';
 import 'home_screen.dart';
 import 'custom_widgets.dart';
 import 'dart:math';
+import 'note.dart';
 
 class NoteScreen extends StatelessWidget{
   final Color noteColor;

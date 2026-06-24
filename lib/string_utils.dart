@@ -30,6 +30,7 @@ class StringUtils {
   static final cancel = "Cancel";
   static final delete = "Delete";
   static final deleted = 'Đã xoá ghi chú thành công!';
+  static final search_key = ' Search by the keyword...';
 
   static String removeVietnameseTones(String str) {
     str = str.replaceAll(RegExp(r'[àáạảãâầấậẩẫăằắặẳẵ]'), 'a');
